@@ -10,3 +10,12 @@
       fruits: "apple, banana, Mango"
     ansible.builtin.debug:
       msg: "{{ fruits | split(',') }}"
+
+  - name: dict to list conversion
+    vars: 
+      dict:
+        name: Devops
+        time: 10
+        age: 26
+    ansible.builtin.debug:
+      msg: "{{ dict | dict2items }}"
