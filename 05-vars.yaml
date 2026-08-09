@@ -7,6 +7,7 @@
       DURATION: 120HRS
       TRAINER: Siva Kumar
     ansible.builtin.debug:
-      msg: "Course id devops with aws, Duration is 120hrs and Trainer is Siva kumar"
+      #msg: "Course id devops with aws, Duration is 120hrs and Trainer is Siva kumar"
+      msg: "Course {{ COURSE }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
 
    
