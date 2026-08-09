@@ -4,10 +4,10 @@
     GREET: PLAY 
   # vars_files:
   #   - course.yaml
-  vars_prompt:
-  - name: GREET
-    prompt: "Please Prompt"
-    private: false
+  # vars_prompt:
+  # - name: GREET
+  #   prompt: "Please Prompt"
+  #   private: false
   tasks:
   - name: vars priority declaring
     # vars:
