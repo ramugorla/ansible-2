@@ -8,6 +8,7 @@
       msg: "Given number {{ my_number }} is greater than 15"
     when: my_number > 15
 
+  - name: number is less than or eq to 15
     ansible.builtin.debug:
       msg: "Given number {{ my_number }} is less than or equal to 15"
     when: my_number <= 15
