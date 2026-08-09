@@ -2,7 +2,7 @@
   hosts: web
   tasks:
   - name: shell cmd 
-    ansible.builtin.shell: ls -l >> out.txt
+    ansible.builtin.shell: ls -l > /tmp/out.txt
     rigister: result_ouput
 
     ansible.builtin.debug:
