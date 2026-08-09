@@ -1,9 +1,9 @@
 - name: print number greater than 15 
   hosts: web 
+  vars:
+      my_number: 20 
   tasks:
   - name: print if number greater than 15 
-    vars:
-      my_number: 20 
     ansible.builtin.debug:
       msg: "Given number {{ my_number }} is greater than 15"
     when: my_number > 15
