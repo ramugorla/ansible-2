@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   tasks:
-  - name: shell module 
+  - name: modules runing  
     ansible.builtin.shell: ls -lt > /tmp/output.txt 
     #ansible.builtin.command: ls -lt > /tmp/output.txt 
 
