@@ -1,0 +1,10 @@
+- name: printing Course info
+  hosts: web
+  vars:
+    COURSE: "Devops with AWS"
+    DURATION: 120HRS
+    TRAINER: siva 
+  tasks:
+  - name: Course Information with PLAY level vars
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
