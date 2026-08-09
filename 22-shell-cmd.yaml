@@ -1,0 +1,9 @@
+- name: shell and CMD module 
+  hosts: web
+  tasks:
+  - name: shell cmd 
+    ansible.builtin.shell: ls -l >> out.txt
+    rigister: result_ouput
+
+  ansible.builtin.debug:
+    msg: "{{ result_ouput }}"
