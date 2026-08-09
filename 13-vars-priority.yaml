@@ -10,8 +10,8 @@
     private: false
   tasks:
   - name: vars priority declaring
-    vars:
-      GREET: TASK
+    # vars:
+    #   GREET: TASK
     ansible.builtin.debug:
       msg: "Hello From {{ GREET }}"
   
