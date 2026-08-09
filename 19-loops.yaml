@@ -1,0 +1,12 @@
+- name: install and run services
+  hosts: web 
+  become: yes 
+  tasks:
+  - name: install services 
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: installed 
+    loop:
+      - nginx
+      - gcc
+      - git 
