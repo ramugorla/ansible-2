@@ -1,6 +1,12 @@
 - name: ansible filters
   hosts: web 
   tasks:
-  - name: filters
+  - name: undefined varaible
     ansible.builtin.debug:
       msg: "Hello {{ Person | default('Ramu') }}"
+
+  - name: string to list conversion
+    vars:
+      fruits: "apple banana Mango"
+    ansible.builtin.debug:
+      msg: "{{ fruits | split(',') }}"
