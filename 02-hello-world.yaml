@@ -1,0 +1,8 @@
+- name: print hello world
+  hosts: backend 
+  tasks:
+  - name: printing hello world msg 
+    ansible.builtin.debug:
+      msg: "Hello world"    # arguments for the ansible debug module
+
+    
