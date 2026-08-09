@@ -14,5 +14,5 @@
         ci: jenkins
         Linux: Shell
         ansible: configuring
-      ansible.builtin.debug:
-        msg: "course name is {{ course_name}}, Duration is {{ DURATION }}, topics are {{ topics }}, is it live {{ live }} and clouds are {{ Cloud }}"
+    ansible.builtin.debug:
+      msg: "course name is {{ course_name}}, Duration is {{ DURATION }}, topics are {{ topics }}, is it live {{ live }} and clouds are {{ Cloud }}"
