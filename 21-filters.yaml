@@ -33,3 +33,14 @@
       list: [ 1, 30, 40, 60]
     ansible.builtin.debug:
       msg: "Min num is {{ list | min }} and max num is {{ list | max }}"
+  - name: upper to lower 
+    vars:
+      name: RAMU GORLA 
+    ansible.builtin.debug:
+      msg: "{{ name: lower }}"
+
+  - name: lower  to upper 
+    vars:
+      name: yadav gorla
+    ansible.builtin.debug:
+      msg: "{{ name: upper }}"
