@@ -6,6 +6,12 @@
     ansible.builtin.package:
       name: "{{ item }}"
       state: installed 
+
+  - name: start services
+    ansible.builtin.service:
+      name: "{{ item }}"
+      state: start
+      enabled: yes 
     loop:
       - nginx
       - gcc
