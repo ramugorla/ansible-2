@@ -1,0 +1,8 @@
+- name: printing Course info with both PLAY and TASK
+  hosts: web 
+  vars_files:
+    - course.yaml
+  tasks:
+  - name: print infor 
+    ansible.builtin.debug:
+    msg: "Course is {{ COURSE }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
