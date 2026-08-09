@@ -3,7 +3,7 @@
   tasks:
   - name: shell cmd 
     ansible.builtin.shell: ls -l > /tmp/out.txt
-    rigister: result_ouput
+    register: result_ouput
 
     ansible.builtin.debug:
       msg: "{{ result_ouput }}"
