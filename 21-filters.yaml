@@ -1,6 +1,11 @@
 - name: ansible filters
   hosts: web 
   tasks:
+
+  - name: installing python libs
+    ansible.builtin.pip:
+      name: netaddr
+      executable: pip3.9
   - name: undefined varaible
     ansible.builtin.debug:
       msg: "Hello {{ Person | default('Ramu') }}"
