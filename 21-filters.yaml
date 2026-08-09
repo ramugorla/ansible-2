@@ -19,3 +19,11 @@
         age: 26
     ansible.builtin.debug:
       msg: "{{ dict | dict2items }}"
+
+  - name: list to dict conversion
+    vars:
+      list:
+        -  { "key": "name", "value": "Devops" }
+        - { "key": "time", "value": 10 }
+    ansible.builtin.debug:
+      msg: "{{ list | items2dict }}"
