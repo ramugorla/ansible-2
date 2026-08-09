@@ -6,7 +6,7 @@
     ansible.builtin.pip:
       name: netaddr
       executable: pip3.9
-      
+
   - name: undefined varaible
     ansible.builtin.debug:
       msg: "Hello {{ Person | default('Ramu') }}"
@@ -54,6 +54,7 @@
 
   - name: is valid IPV4 or not 
     vars:
-      ip: 163.220.124.230
+      #ip: 163.220.124.230
+      ip: 348.465.67.888
     ansible.builtin.debug:
       msg: "{{ ip | ansible.utils.ipaddr }}"
