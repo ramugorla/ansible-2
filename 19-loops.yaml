@@ -14,7 +14,7 @@
   - name: start services
     ansible.builtin.service:
       name: "{{ item }}"
-      state: start
+      state: started
       enabled: yes 
     loop:
       - nginx
