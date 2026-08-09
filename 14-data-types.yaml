@@ -1,6 +1,6 @@
 - name: data types
   hosts: web 
-  task:
+  tasks:
   - name: data types in ansible 
     vars:
       course_name: "Devops With Aws" # string 
