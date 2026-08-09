@@ -4,4 +4,12 @@
   - name: Course Information
     ansible.builtin.debug:
       msg: "Course is {{ COURSE }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
-      
+
+
+- name: printing Course info 
+  hosts: local 
+  connection: local
+  tasks:
+  - name: Course Information
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
