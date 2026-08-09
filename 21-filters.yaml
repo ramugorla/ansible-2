@@ -45,3 +45,9 @@
       name: yadav gorla
     ansible.builtin.debug:
       msg: "{{ name | upper }}"
+
+  - name: is valid IPV4 or not 
+    var:
+      ip: 163.220.124.230
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipaddr }}"
