@@ -1,12 +1,12 @@
 - name: print course infor with prompt vars
   hosts: web
   vars_prompt:
-    - name: COURSE
-      prompt: "Please enter course name: "
-      private: false
-    - name: DURATION
-      prompt: "Please enter Duration: "
-    - name: TRAINER
-      prompt: "Please eneter Trainer name: "
-      ansible.builtin.debug:
-        msg: "Course is {{ COURSE }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
+  - name: COURSE
+    prompt: "Please enter course name: "
+    private: false
+  - name: DURATION
+    prompt: "Please enter Duration: "
+  - name: TRAINER
+    prompt: "Please eneter Trainer name: "
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
