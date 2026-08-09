@@ -1,7 +1,7 @@
-- name: shell and CMD module 
+- name: shell and command module 
   hosts: web
   tasks:
-  - name: shell cmd 
+  - name: shell command 
     ansible.builtin.shell: ls -l > /tmp/out.txt
     register: result_ouput
 
