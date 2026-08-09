@@ -1,0 +1,17 @@
+- name: vars priority
+  hosts: web 
+  vars:
+    GREET: PLAY 
+  vars_files:
+    - course.yaml
+  vars_prompt:
+  - name: GREET
+    prompt: "Please Prompt"
+    private: false
+  tasks:
+  - name: vars priority declaring
+    vars:
+      GREET: TASK
+    ansible.builtin.debug:
+      msg: "Hello From {{ GREET }}
+  
