@@ -1,0 +1,6 @@
+- name: printing Course info 
+  hosts: 172.31.26.169
+  tasks:
+  - name: Course Information
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
