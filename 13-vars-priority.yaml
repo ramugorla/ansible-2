@@ -1,7 +1,7 @@
 - name: vars priority
   hosts: web 
-  vars:
-    GREET: PLAY 
+  # vars:
+  #   GREET: PLAY 
   # vars_files:
   #   - course.yaml
   # vars_prompt:
