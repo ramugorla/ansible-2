@@ -27,3 +27,9 @@
         - { "key": "time", "value": 10 }
     ansible.builtin.debug:
       msg: "{{ list | items2dict }}"
+
+  - name: min and max numbers
+    vars:
+      list: [ 1, 30, 40, 60]
+    ansible.builtin.debug:
+      msg: "Min num is {{ list | min }} and max num is {{ list | max }}"
