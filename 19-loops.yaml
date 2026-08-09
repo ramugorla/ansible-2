@@ -1,22 +1,26 @@
 - name: install and run services
   hosts: web 
   become: yes 
+  loop:
+    - nginx
+    - gcc
+    - git 
   tasks:
   - name: install services 
     ansible.builtin.package:
       name: "{{ item }}"
       state: installed 
-    loop:
-      - nginx
-      - gcc
-      - git 
+    # loop:
+    #   - nginx
+    #   - gcc
+    #   - git 
 
   - name: start services
     ansible.builtin.service:
       name: "{{ item }}"
       state: started
       enabled: yes 
-    loop:
-      - nginx
-      - gcc
-      - git 
+    # loop:
+    #   - nginx
+    #   - gcc
+    #   - git 
