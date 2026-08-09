@@ -5,5 +5,5 @@
     vars:
       my_number: 20 
     ansible.builtin.debug:
-      msg: "Given {{ my_number }} is greater than 15"
-    when: my_number >15
+      msg: "Given number {{ my_number }} is greater than 15"
+    when: my_number < 15
